@@ -37,6 +37,11 @@ namespace Bounsweet.Services
 
             var tokens = await GetAllRefreshTokensAsync(token.ClientId, token.UserName);
 
+            if (tokens.Count > 10)
+            {
+
+            }
+
             var existingToken = tokens.FirstOrDefault(t => t.UserName == token.UserName && t.ClientId == token.ClientId);
             if (existingToken != null)
             {
@@ -65,9 +70,8 @@ namespace Bounsweet.Services
         {
             var tokens = await GetAllRefreshTokensAsync(token.ClientId, token.UserName);
             var currentToken = tokens.FirstOrDefault(t => t.ClientId == token.ClientId && t.UserName == token.UserName);
-            currentToken.TokenInfo.Active = false;
+            currentToken.Active = false;
             await AddRefreshTokenAsync(currentToken);
-
         }
 
     }

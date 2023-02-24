@@ -9,6 +9,12 @@
         public DateTime ExpiredTime { get; set; }
         public string ProtectedTicket { get; set; }
 
-        public RefreshTokenInfo TokenInfo { get; set; }
+        public long ClientKeyId { get; set; }
+        public string ClientSecret { get; set; }
+        public string ClientName { get; set; }
+        public bool Active { get; set; }
+        public int LifeTime { get; set; }
+        public string AllowedOrigin { get; set; }
+
     }
 }
