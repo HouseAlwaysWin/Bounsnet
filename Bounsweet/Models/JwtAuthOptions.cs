@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Bounsweet.Models
 {
-    public class JwtAuthOptions : AuthenticationSchemeOptions
+    public class JwtAuthOptions : JwtBearerOptions
     {
-        public string AuthenticationScheme { get; set; }
+        public bool SaveJwtInCookie { get; set; }
     }
 }
