@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bounsweet.Services
+namespace Bounsnet.Services
 {
     public class CachedService : ICachedService
     {
@@ -14,7 +14,6 @@ namespace Bounsweet.Services
 
         public CachedService(
             IDistributedCache db
-
             )
         {
             this._db = db;

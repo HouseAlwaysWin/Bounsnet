@@ -1,5 +1,5 @@
-﻿using Bounsweet.Models;
-using Bounsweet.Repositories.Adapters;
+﻿using Bounsnet.Models;
+using Bounsnet.Repositories.Adapters;
 using Dapper;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bounsweet.Repositories
+namespace Bounsnet.Repositories
 {
     public abstract class DapperBaseRepository<TConn> where TConn : IDbConnection, new()
     {

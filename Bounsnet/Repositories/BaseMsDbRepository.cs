@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bounsweet.Models
+namespace Bounsnet.Repositories
 {
-    public class ColSet<T> : Dictionary<Expression<Func<T, object>>, object?>
+    public class BaseMsDbRepository : DapperBaseRepository<SqlConnection>
     {
     }
 }

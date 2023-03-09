@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bounsweet.Models
+namespace Bounsnet.Models
 {
     public class JwtAuthOptions : JwtBearerOptions
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bounsweet.Repositories.Adapters
+namespace Bounsnet.Repositories.Adapters
 {
     public class OracleDbAdapter : IConnAdapter
     {

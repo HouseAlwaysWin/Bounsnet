@@ -1,4 +1,4 @@
-﻿using Bounsweet.Models;
+﻿using Bounsnet.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Logging;
@@ -13,7 +13,7 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 
-namespace Bounsweet.Middlewares
+namespace Bounsnet.Middlewares
 {
     public class JwtAuthHandler<TOptions> : AuthenticationHandler<TOptions> where TOptions : JwtAuthOptions, new()
     {

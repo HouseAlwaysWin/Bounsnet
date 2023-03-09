@@ -1,5 +1,5 @@
-﻿using Bounsweet.Middlewares;
-using Bounsweet.Models;
+﻿using Bounsnet.Middlewares;
+using Bounsnet.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bounsweet.Extensions
+namespace Bounsnet.Extensions
 {
     public static class JwtTokenAuthExtensions
     {

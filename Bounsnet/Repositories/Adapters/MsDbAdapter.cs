@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bounsweet.Repositories
+namespace Bounsnet.Repositories.Adapters
 {
-    public class BaseMsDbRepository : DapperBaseRepository<SqlConnection>
+    public class MsDbAdapter : IConnAdapter
     {
+        public string DbParamTag { get => "@"; }
     }
 }

@@ -1,6 +1,6 @@
-﻿using Bounsweet.Models;
+﻿using Bounsnet.Models;
 
-namespace Bounsweet.Services
+namespace Bounsnet.Services
 {
     public interface IRefreshTokenService
     {

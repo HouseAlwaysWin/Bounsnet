@@ -1,4 +1,4 @@
-﻿namespace Bounsweet.Services
+﻿namespace Bounsnet.Services
 {
     public interface ICachedService
     {

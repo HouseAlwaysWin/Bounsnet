@@ -1,4 +1,4 @@
-﻿namespace Bounsweet.Repositories.Adapters
+﻿namespace Bounsnet.Repositories.Adapters
 {
     public interface IConnAdapter
     {

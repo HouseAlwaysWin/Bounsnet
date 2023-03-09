@@ -1,4 +1,4 @@
-﻿using Bounsweet.Models;
+﻿using Bounsnet.Models;
 using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using Microsoft.Extensions.Options;
@@ -13,7 +13,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bounsweet.Services
+namespace Bounsnet.Services
 {
     public class AuthService
     {

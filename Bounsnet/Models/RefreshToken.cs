@@ -1,4 +1,4 @@
-﻿namespace Bounsweet.Models
+﻿namespace Bounsnet.Models
 {
     public class RefreshToken
     {

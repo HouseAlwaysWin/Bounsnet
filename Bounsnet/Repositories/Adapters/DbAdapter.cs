@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bounsweet.Repositories.Adapters
+namespace Bounsnet.Repositories.Adapters
 {
     public class DbAdapter<TConn> where TConn : IDbConnection, new()
     {
