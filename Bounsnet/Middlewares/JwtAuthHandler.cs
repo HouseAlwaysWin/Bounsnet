@@ -1,6 +1,8 @@
 ﻿using Bounsnet.Models;
+using Bounsnet.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
@@ -18,9 +20,14 @@ namespace Bounsnet.Middlewares
     public class JwtAuthHandler<TOptions> : AuthenticationHandler<TOptions> where TOptions : JwtAuthOptions, new()
     {
         private OpenIdConnectConfiguration _configuration;
-        public JwtAuthHandler(IOptionsMonitor<TOptions> options, ILoggerFactory logger, UrlEncoder encoder, ISystemClock clock) : base(options, logger, encoder, clock)
-        {
+        private IRefreshTokenService _refreshTokenService;
+        public JwtAuthHandler(
+            IRefreshTokenService refreshTokenService,
+            IOptionsMonitor<TOptions> options, ILoggerFactory logger, UrlEncoder encoder, ISystemClock clock
 
+              ) : base(options, logger, encoder, clock)
+        {
+            _refreshTokenService = refreshTokenService;
         }
 
         /// <summary>
@@ -37,7 +44,6 @@ namespace Bounsnet.Middlewares
         {
             try
             {
-
                 var msgReceivedContext = new MessageReceivedContext(Context, Scheme, Options);
                 // event can set the token
                 await Events.MessageReceived(msgReceivedContext);
@@ -139,6 +145,7 @@ namespace Bounsnet.Middlewares
                         return tokenValidatedContext.Result;
                     }
                 }
+
 
                 if (validationFailures != null)
                 {

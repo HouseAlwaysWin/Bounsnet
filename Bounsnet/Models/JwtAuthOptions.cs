@@ -11,5 +11,6 @@ namespace Bounsnet.Models
     public class JwtAuthOptions : JwtBearerOptions
     {
         public bool SaveJwtInCookie { get; set; }
+        public RefreshTokenOptions RefreshTokenOptions { get; set; }
     }
 }
